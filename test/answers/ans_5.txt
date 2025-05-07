@@ -1,0 +1,2 @@
+Time format is invalid
+line (2): 12:00 24:00

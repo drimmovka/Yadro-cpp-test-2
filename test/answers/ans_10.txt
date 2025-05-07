@@ -1,0 +1,26 @@
+10:00
+09:59 1 x
+09:59 13 NotOpenYet
+10:00 1 x
+10:01 1 x
+10:01 13 YouShallNotPass
+10:02 2 x 1
+10:03 2 x 1
+10:03 13 PlaceIsBusy
+10:04 1 y
+10:05 2 y 1
+10:05 13 PlaceIsBusy
+10:06 2 y 2
+10:07 1 z
+10:08 4 z
+10:09 4 x
+10:10 4 y
+10:11 2 x 1
+10:11 13 ClientUnknown
+10:12 4 x
+10:12 13 ClientUnknown
+10:13 2 x 1
+10:13 13 ClientUnknown
+18:00
+1 12 00:07
+2 12 00:04

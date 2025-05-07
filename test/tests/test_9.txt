@@ -1,0 +1,53 @@
+3
+09:00 23:00
+10
+09:00 1 user1
+09:01 1 user2
+09:02 2 user1 1
+09:03 2 user2 2
+09:04 1 user3
+09:05 2 user3 3
+09:06 1 user4
+09:07 3 user4
+09:08 1 user5
+09:09 3 user5
+09:10 1 user6
+09:11 3 user6
+09:12 1 user7
+09:13 3 user7
+09:14 1 user8
+09:15 3 user8
+09:16 1 user9
+09:17 3 user9
+09:18 4 user2
+09:19 4 user3
+09:20 4 user1
+09:21 4 user5
+09:22 4 user6
+09:23 4 user4
+09:24 4 user7
+09:25 4 user8
+09:26 4 user9
+09:27 2 user10 1
+09:28 4 user10
+09:29 1 user11
+09:30 2 user11 1
+09:31 1 user12
+09:32 2 user12 2
+09:33 1 user13
+09:34 3 user13
+09:35 1 user14
+09:36 3 user14
+09:37 1 user15
+09:38 3 user15
+09:39 1 user16
+09:40 3 user16
+09:41 1 user17
+09:42 3 user17
+09:43 4 user11
+09:44 4 user12
+09:45 4 user13
+09:46 4 user14
+09:47 4 user15
+09:48 4 user16
+09:49 4 user17

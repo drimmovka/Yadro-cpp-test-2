@@ -1,0 +1,131 @@
+09:00
+08:55 1 early_bird
+08:55 13 NotOpenYet
+09:00 1 user1
+09:01 2 user1 1
+09:02 1 user2
+09:03 2 user2 2
+09:04 1 user3
+09:05 2 user3 3
+09:10 1 user4
+09:11 3 user4
+09:12 1 user5
+09:13 3 user5
+09:14 1 user6
+09:15 3 user6
+09:20 2 user1 2
+09:20 13 PlaceIsBusy
+09:21 2 user1 3
+09:21 13 PlaceIsBusy
+09:22 2 user1 1
+09:22 13 PlaceIsBusy
+09:30 4 user3
+09:30 12 user4 3
+09:35 4 user1
+09:35 12 user5 1
+09:40 4 user2
+09:40 12 user6 2
+09:45 4 user5
+09:46 4 user4
+10:00 1 new1
+10:01 2 new1 1
+10:10 1 new2
+10:11 2 new2 2
+10:11 13 PlaceIsBusy
+10:12 1 new3
+10:13 2 new3 3
+10:20 1 new4
+10:21 3 new4
+11:00 4 new1
+11:00 12 new2 1
+11:01 4 new2
+11:01 12 new4 1
+11:02 1 late1
+11:03 2 late1 2
+11:03 13 PlaceIsBusy
+11:10 4 new3
+11:10 12 late1 3
+11:11 1 late2
+11:12 2 late2 3
+11:12 13 PlaceIsBusy
+12:00 1 mass0
+12:00 3 mass0
+12:01 1 mass1
+12:01 2 mass1 2
+12:01 13 PlaceIsBusy
+12:02 1 mass2
+12:02 2 mass2 3
+12:02 13 PlaceIsBusy
+12:03 1 mass3
+12:03 3 mass3
+12:03 11 mass3
+12:04 1 mass4
+12:04 2 mass4 2
+12:04 13 PlaceIsBusy
+12:05 1 mass5
+12:05 2 mass5 3
+12:05 13 PlaceIsBusy
+12:06 1 mass6
+12:06 3 mass6
+12:06 11 mass6
+12:07 1 mass7
+12:07 2 mass7 2
+12:07 13 PlaceIsBusy
+12:08 1 mass8
+12:08 2 mass8 3
+12:08 13 PlaceIsBusy
+12:09 1 mass9
+12:09 3 mass9
+12:09 11 mass9
+12:10 1 mass10
+12:10 2 mass10 2
+12:10 13 PlaceIsBusy
+12:11 1 mass11
+12:11 2 mass11 3
+12:11 13 PlaceIsBusy
+12:12 1 mass12
+12:12 3 mass12
+12:12 11 mass12
+12:13 1 mass13
+12:13 2 mass13 2
+12:13 13 PlaceIsBusy
+12:14 1 mass14
+12:14 2 mass14 3
+12:14 13 PlaceIsBusy
+12:15 1 mass15
+12:15 3 mass15
+12:15 11 mass15
+12:16 1 mass16
+12:16 2 mass16 2
+12:16 13 PlaceIsBusy
+12:17 1 mass17
+12:17 2 mass17 3
+12:17 13 PlaceIsBusy
+12:18 1 mass18
+12:18 3 mass18
+12:18 11 mass18
+12:19 1 mass19
+12:19 2 mass19 2
+12:19 13 PlaceIsBusy
+21:00 11 late1
+21:00 11 late2
+21:00 11 mass0
+21:00 11 mass1
+21:00 11 mass10
+21:00 11 mass11
+21:00 11 mass13
+21:00 11 mass14
+21:00 11 mass16
+21:00 11 mass17
+21:00 11 mass19
+21:00 11 mass2
+21:00 11 mass4
+21:00 11 mass5
+21:00 11 mass7
+21:00 11 mass8
+21:00 11 new4
+21:00 11 user6
+21:00
+1 280 11:43
+2 260 11:57
+3 260 11:28

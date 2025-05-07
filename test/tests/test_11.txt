@@ -1,0 +1,79 @@
+3
+09:00 21:00
+20
+08:55 1 early_bird
+09:00 1 user1
+09:01 2 user1 1
+09:02 1 user2
+09:03 2 user2 2
+09:04 1 user3
+09:05 2 user3 3
+09:10 1 user4
+09:11 3 user4
+09:12 1 user5
+09:13 3 user5
+09:14 1 user6
+09:15 3 user6
+09:20 2 user1 2
+09:21 2 user1 3
+09:22 2 user1 1
+09:30 4 user3
+09:35 4 user1
+09:40 4 user2
+09:45 4 user5
+09:46 4 user4
+10:00 1 new1
+10:01 2 new1 1
+10:10 1 new2
+10:11 2 new2 2
+10:12 1 new3
+10:13 2 new3 3
+10:20 1 new4
+10:21 3 new4
+11:00 4 new1
+11:01 4 new2
+11:02 1 late1
+11:03 2 late1 2
+11:10 4 new3
+11:11 1 late2
+11:12 2 late2 3
+12:00 1 mass0
+12:00 3 mass0
+12:01 1 mass1
+12:01 2 mass1 2
+12:02 1 mass2
+12:02 2 mass2 3
+12:03 1 mass3
+12:03 3 mass3
+12:04 1 mass4
+12:04 2 mass4 2
+12:05 1 mass5
+12:05 2 mass5 3
+12:06 1 mass6
+12:06 3 mass6
+12:07 1 mass7
+12:07 2 mass7 2
+12:08 1 mass8
+12:08 2 mass8 3
+12:09 1 mass9
+12:09 3 mass9
+12:10 1 mass10
+12:10 2 mass10 2
+12:11 1 mass11
+12:11 2 mass11 3
+12:12 1 mass12
+12:12 3 mass12
+12:13 1 mass13
+12:13 2 mass13 2
+12:14 1 mass14
+12:14 2 mass14 3
+12:15 1 mass15
+12:15 3 mass15
+12:16 1 mass16
+12:16 2 mass16 2
+12:17 1 mass17
+12:17 2 mass17 3
+12:18 1 mass18
+12:18 3 mass18
+12:19 1 mass19
+12:19 2 mass19 2
