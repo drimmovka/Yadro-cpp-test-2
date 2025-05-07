@@ -1,4 +1,5 @@
 digraph UML {
+    splines=ortho;
     rankdir=BT;
     node [shape=record, fontname=Arial];
     
@@ -38,8 +39,8 @@ digraph UML {
         */
 
         /* event body classes */
-        /*
         "iEventBody" [label="{iEventBody|}"];
+        /*
         "ClientArrivedEventBody" [label="{ClientArrivedEventBody|- client : Client\l}"];
         "ClientTryToSitEventBody" [label="{ClientTryToSitEventBody|- client : Client\l- table_id : id_t\l}"];
         "ClientWaitingEventBody" [label="{ClientWaitingEventBody|- client : Client\l}"];
@@ -100,16 +101,17 @@ digraph UML {
     
     "EventParser" -> "iEvent" [arrowhead=vee];
     
-    "OutputWriter" -> "ComputerClub" [arrowhead=vee];
-    "OutputWriter" -> "ComputerClubManager" [arrowhead=vee];
+    "Application" -> "ComputerClub" [arrowhead=vee];
+    "Application" -> "ComputerClubManager" [arrowhead=vee];
     
     "ComputerClubManager" -> "ComputerClub" [arrowhead=vee];
     "ComputerClubManager" -> "iEvent" [arrowhead=vee];
 
-    "ComputerClub" -> "Client::ClientHash" [arrowhead=vee];
     "ComputerClub" -> "Table" [arrowhead=vee];
     "ComputerClub" -> "Client" [arrowhead=vee];
     
+    "iEvent" -> "iEventBody" [arrowhead=vee];
+
     /* Compositions */
     "Client::ClientHash" -> "Client" [arrowhead=diamond];
     
