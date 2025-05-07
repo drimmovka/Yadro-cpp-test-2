@@ -6,21 +6,7 @@
 
 #include "time24.hpp"
 #include "event.hpp"
-
-
-class EventParserException : public std::exception {
-public:
-    explicit EventParserException(const std::string& message)
-        : _message(message)
-    {}
-
-    const char *what() const noexcept override {
-        return _message.c_str();
-    }
-    
-protected:
-    const std::string _message;
-};
+#include "exception.hpp"
 
 class EventParser {
 public:

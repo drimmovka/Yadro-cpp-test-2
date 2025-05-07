@@ -3,22 +3,9 @@
 #include <optional>
 
 #include "time24.hpp"
+#include "exception.hpp"
 
 using TableInfo = std::string;
-
-class TableException : public std::exception {
-public:
-    explicit TableException(const std::string& message)
-        : _message(message)
-    {}
-
-    const char *what() const noexcept override {
-        return _message.c_str();
-    }
-    
-protected:
-    const std::string _message;
-};
 
 
 class Table {

@@ -7,20 +7,7 @@
 
 #include "computer_club.hpp"
 #include "event.hpp"
-
-class ComputerClubManagerException : public std::exception {
-public:
-    explicit ComputerClubManagerException(const std::string& message)
-        : _message(message)
-    {}
-    
-    const char* what() const noexcept override { 
-        return _message.c_str();
-    }
-
-private:
-    const std::string _message;
-};
+#include "exception.hpp"
 
 class ComputerClubManager {
 

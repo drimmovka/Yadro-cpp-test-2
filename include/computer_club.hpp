@@ -8,21 +8,7 @@
 
 #include "table.hpp"
 #include "client.hpp"
-
-class ComputerClubException : public std::exception {
-public:
-    explicit ComputerClubException(const std::string& message)
-        : _message(message)
-    {}
-
-    const char *what() const noexcept override {
-        return _message.c_str();
-    }
-    
-protected:
-    const std::string _message;
-};
-
+#include "exception.hpp"
 
 class ComputerClub {
 // The invariant is that:

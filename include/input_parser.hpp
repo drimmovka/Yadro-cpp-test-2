@@ -3,21 +3,8 @@
 #include <utility>
 
 #include "event_parser.hpp"
+#include "exception.hpp"
 
-class InputParserException : public std::exception {
-public:
-    explicit InputParserException(const std::string& message)
-        : _message(message)
-    {}
-
-    const char *what() const noexcept override {
-        return _message.c_str();
-    }
-    
-protected:
-    const std::string _message;
-};
-    
 
 class InputParser {
 
