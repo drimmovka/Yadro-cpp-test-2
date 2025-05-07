@@ -1,5 +1,8 @@
 #include "computer_club.hpp"
 
+namespace ccms
+{
+
 ComputerClub::ComputerClub(int tables_number, const Time24& start_time, const Time24& end_time, int hourly_rate) {
     validateInput(tables_number, start_time, end_time, hourly_rate);
     _start_time = start_time;
@@ -154,3 +157,5 @@ void ComputerClub::validateInput(int tables_number, const Time24& start_time, co
         throw ComputerClubException("Hourly rate cannot be negative");
     }
 }
+
+} // namespace ccms

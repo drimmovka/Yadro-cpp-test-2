@@ -3,6 +3,8 @@
 #include <exception>
 #include <string>
 
+namespace ccms
+{
 
 class ClientException : public std::exception {
 public:
@@ -79,3 +81,5 @@ public:
 private:
     const std::string _message;
 };
+
+} // namespace ccms

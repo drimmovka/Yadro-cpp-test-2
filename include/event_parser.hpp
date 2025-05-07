@@ -8,6 +8,9 @@
 #include "event.hpp"
 #include "exception.hpp"
 
+namespace ccms
+{
+
 class EventParser {
 public:
 
@@ -27,3 +30,5 @@ private:
 
     std::shared_ptr<iEvent> parseClientDeparted(std::istream& iss, const Time24& event_time);
 };
+
+} // namespace ccms

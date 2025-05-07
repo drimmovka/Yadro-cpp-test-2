@@ -1,5 +1,7 @@
 #include "table.hpp"
 
+namespace ccms
+{
 
 Table::Table(int hourly_rate) {
     if (hourly_rate < 0) {
@@ -56,3 +58,5 @@ void Table::addRevenue(const Time24& occupancy_time) {
 void Table::addOccupiedTime(const Time24& time) {
     _total_occupied_time += time;
 }
+
+} // namespace ccms

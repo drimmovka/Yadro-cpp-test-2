@@ -1,5 +1,8 @@
 #include "exception.hpp"
 
+namespace ccms
+{
+
 ClientException::ClientException(const std::string& message)
     : _message(message)
 {}
@@ -61,3 +64,5 @@ Time24Exception::Time24Exception(const std::string& message)
 const char *Time24Exception::what() const noexcept {
     return _message.c_str();
 }
+
+} // namespace ccms

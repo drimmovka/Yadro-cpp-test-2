@@ -16,7 +16,7 @@ int main(int argc, char* argv[]) {
         return 1;
     }
     
-    Application application(file_stream, std::cout);
+    ccms::Application application(file_stream, std::cout);
     application.run();
     return 0;
 }

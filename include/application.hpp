@@ -7,6 +7,8 @@
 #include "computer_club.hpp"
 #include "computer_club_manager.hpp"
 
+namespace ccms
+{
 
 class Application {
 public:
@@ -21,3 +23,5 @@ private:
     InputParser _input_parser;
     OutputWriter _output_writer;
 };
+
+} // namespace ccms

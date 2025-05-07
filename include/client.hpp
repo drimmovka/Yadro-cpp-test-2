@@ -6,6 +6,9 @@
 
 #include "exception.hpp"
 
+namespace ccms
+{
+
 class Client {
 public:
     Client();
@@ -39,3 +42,5 @@ private:
     void parseName(const std::string& name);
 
 };
+
+} // namespace ccms

@@ -9,6 +9,9 @@
 #include "event.hpp"
 #include "exception.hpp"
 
+namespace ccms
+{
+
 class ComputerClubManager {
 
 // This class is actually an event dispatcher, and some events may generate new events,
@@ -58,3 +61,5 @@ private:
 
     void handleWorkDayEndEvent(const std::shared_ptr<WorkDayEndEvent>& ev);
 };
+
+} // namespace ccms

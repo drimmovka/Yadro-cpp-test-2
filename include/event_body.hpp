@@ -5,6 +5,9 @@
 // most likely, separate classes for storing data are not needed to solve the task, 
 // but for the flexibility of the code and the correct representation of the event (time, body), it was left
 
+namespace ccms
+{
+
 class iEventBody {
 public:
     virtual ~iEventBody();
@@ -74,3 +77,5 @@ class WorkDayEndEventBody : public iEventBody {
 public:
     WorkDayEndEventBody();
 };
+
+} // namespace ccms

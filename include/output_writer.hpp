@@ -3,6 +3,8 @@
 #include "computer_club.hpp"
 #include "computer_club_manager.hpp"
 
+namespace ccms {
+
 class OutputWriter {
 
 public:
@@ -18,3 +20,5 @@ public:
 private:
     std::ostream& _os;
 };
+
+} // namespace ccms

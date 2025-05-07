@@ -10,10 +10,20 @@ add_subdirectory(third_party/googletest)
 
 include_directories(../include)
 
-file(GLOB SOURCES "../src/*.cpp")
-
 add_executable(${PROJECT_NAME} 
-    ${SOURCES}
-    test.cpp)
+    test.cpp
+    ../src/application.cpp
+    ../src/client.cpp
+    ../src/computer_club.cpp
+    ../src/computer_club_manager.cpp
+    ../src/event_body.cpp
+    ../src/event.cpp
+    ../src/event_parser.cpp
+    ../src/exception.cpp
+    ../src/input_parser.cpp
+    ../src/output_writer.cpp
+    ../src/table.cpp
+    ../src/time24.cpp
+)
 
 target_link_libraries(${PROJECT_NAME} PRIVATE gtest_main)

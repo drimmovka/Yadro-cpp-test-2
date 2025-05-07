@@ -1,5 +1,8 @@
 #include "computer_club_manager.hpp"
 
+namespace ccms
+{
+
 ComputerClubManager::ComputerClubManager(ComputerClub& computer_club) 
     : _computer_club(computer_club) 
 {
@@ -175,3 +178,5 @@ void ComputerClubManager::handleWorkDayEndEvent(const std::shared_ptr<WorkDayEnd
         }
     }
 }
+
+} // namespace ccms

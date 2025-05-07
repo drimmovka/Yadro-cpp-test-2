@@ -1,5 +1,8 @@
 #include "event_body.hpp"
 
+namespace ccms
+{
+
 iEventBody::~iEventBody() = default;
 
 
@@ -34,3 +37,5 @@ ErrorEventBody::ErrorEventBody(const std::string& message)
 {}
 
 WorkDayEndEventBody::WorkDayEndEventBody() {}
+
+} // namespace ccms

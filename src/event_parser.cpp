@@ -1,5 +1,8 @@
 #include "event_parser.hpp"
 
+namespace ccms
+{
+
 EventParser::EventParser() = default;
 EventParser::~EventParser() = default;
 
@@ -64,3 +67,5 @@ std::shared_ptr<iEvent> EventParser::parseClientDeparted(std::istream& iss, cons
         std::make_shared<ClientDepartedBody>(Client(client_name))
     );
 }
+
+} // namespace ccms

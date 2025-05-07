@@ -10,6 +10,9 @@
 #include "client.hpp"
 #include "exception.hpp"
 
+namespace ccms
+{
+
 class ComputerClub {
 // The invariant is that:
 // if a customer is in a club, 
@@ -65,3 +68,5 @@ private:
     void validateInput(int tables_number, const Time24& start_time, const Time24& end_time, int hourly_rate);
 
 };
+
+} // namespace ccms

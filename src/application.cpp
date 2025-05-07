@@ -1,6 +1,9 @@
 #include "application.hpp"
 
 
+namespace ccms
+{
+
 Application::Application(std::istream& is, std::ostream& os)
     : _input_parser(is)
     , _output_writer(os)
@@ -58,3 +61,5 @@ void Application::run() {
 
     _output_writer.outputLog(*computer_club, *computer_club_manager);
 }
+
+} // namespace ccms

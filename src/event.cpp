@@ -1,5 +1,7 @@
 #include "event.hpp"
 
+namespace ccms
+{
 
 iEvent::iEvent(Time24 time) : time(time) {}
 iEvent::~iEvent() = default;
@@ -98,3 +100,5 @@ WorkDayEndEvent::WorkDayEndEvent(Time24 time, std::shared_ptr<WorkDayEndEventBod
 EventInfo WorkDayEndEvent::info() const {
     return EventInfo();
 }
+
+} // namespace ccms

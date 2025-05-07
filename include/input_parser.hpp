@@ -5,6 +5,8 @@
 #include "event_parser.hpp"
 #include "exception.hpp"
 
+namespace ccms
+{
 
 class InputParser {
 
@@ -38,3 +40,5 @@ private:
 
     void readInBuf();
 };
+
+} // namespace ccms

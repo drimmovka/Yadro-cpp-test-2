@@ -1,5 +1,7 @@
 #include "time24.hpp"
 
+namespace ccms
+{
 
 Time24::Time24(int hours, int minutes) {
     set(hours, minutes);
@@ -132,3 +134,5 @@ void Time24::parseFormattedTime(const std::string& formatted_time) {
     _hours = std::stoi(match[1]);
     _minutes = std::stoi(match[2]);
 }
+
+} // namespace ccms

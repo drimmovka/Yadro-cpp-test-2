@@ -1,5 +1,7 @@
 #include "client.hpp"
 
+namespace ccms
+{
 
 Client::Client() = default;
 Client::~Client() = default;
@@ -46,3 +48,5 @@ void Client::parseName(const std::string& name) {
 
     _name = name;
 }
+
+} // namespace ccms

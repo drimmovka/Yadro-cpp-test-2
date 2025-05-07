@@ -25,7 +25,7 @@ protected:
 TEST_F(FileIOTestq, TestCase1) {
     std::ifstream input("tests/test_1.txt");
     std::ofstream output("got/ans_1.txt");
-    Application app(input, output);
+    ccms::Application app(input, output);
     app.run();
     
     std::string expected = readFile("answers/ans_1.txt");
@@ -38,7 +38,7 @@ TEST_F(FileIOTestq, TestCase1) {
 TEST_F(FileIOTestq, TestCase2) {
     std::ifstream input("tests/test_2.txt");
     std::ofstream output("got/ans_2.txt");
-    Application app(input, output);
+    ccms::Application app(input, output);
     app.run();
     
     std::string expected = readFile("answers/ans_2.txt");
@@ -51,7 +51,7 @@ TEST_F(FileIOTestq, TestCase2) {
 TEST_F(FileIOTestq, TestCase3) {
     std::ifstream input("tests/test_3.txt");
     std::ofstream output("got/ans_3.txt");
-    Application app(input, output);
+    ccms::Application app(input, output);
     app.run();
     
     std::string expected = readFile("answers/ans_3.txt");
@@ -63,7 +63,7 @@ TEST_F(FileIOTestq, TestCase3) {
 TEST_F(FileIOTestq, TestCase4) {
     std::ifstream input("tests/test_4.txt");
     std::ofstream output("got/ans_4.txt");
-    Application app(input, output);
+    ccms::Application app(input, output);
     app.run();
     
     std::string expected = readFile("answers/ans_4.txt");
@@ -75,7 +75,7 @@ TEST_F(FileIOTestq, TestCase4) {
 TEST_F(FileIOTestq, TestCase5) {
     std::ifstream input("tests/test_5.txt");
     std::ofstream output("got/ans_5.txt");
-    Application app(input, output);
+    ccms::Application app(input, output);
     app.run();
     
     std::string expected = readFile("answers/ans_5.txt");
@@ -87,7 +87,7 @@ TEST_F(FileIOTestq, TestCase5) {
 TEST_F(FileIOTestq, TestCase6) {
     std::ifstream input("tests/test_6.txt");
     std::ofstream output("got/ans_6.txt");
-    Application app(input, output);
+    ccms::Application app(input, output);
     app.run();
     
     std::string expected = readFile("answers/ans_6.txt");
@@ -99,7 +99,7 @@ TEST_F(FileIOTestq, TestCase6) {
 TEST_F(FileIOTestq, TestCase7) {
     std::ifstream input("tests/test_7.txt");
     std::ofstream output("got/ans_7.txt");
-    Application app(input, output);
+    ccms::Application app(input, output);
     app.run();
     
     std::string expected = readFile("answers/ans_7.txt");
@@ -111,7 +111,7 @@ TEST_F(FileIOTestq, TestCase7) {
 TEST_F(FileIOTestq, TestCase8) {
     std::ifstream input("tests/test_8.txt");
     std::ofstream output("got/ans_8.txt");
-    Application app(input, output);
+    ccms::Application app(input, output);
     app.run();
     
     std::string expected = readFile("answers/ans_8.txt");
@@ -123,7 +123,7 @@ TEST_F(FileIOTestq, TestCase8) {
 TEST_F(FileIOTestq, TestCase9) {
     std::ifstream input("tests/test_9.txt");
     std::ofstream output("got/ans_9.txt");
-    Application app(input, output);
+    ccms::Application app(input, output);
     app.run();
     
     std::string expected = readFile("answers/ans_9.txt");
@@ -135,7 +135,7 @@ TEST_F(FileIOTestq, TestCase9) {
 TEST_F(FileIOTestq, TestCase10) {
     std::ifstream input("tests/test_10.txt");
     std::ofstream output("got/ans_10.txt");
-    Application app(input, output);
+    ccms::Application app(input, output);
     app.run();
     
     std::string expected = readFile("answers/ans_10.txt");
@@ -147,7 +147,7 @@ TEST_F(FileIOTestq, TestCase10) {
 TEST_F(FileIOTestq, TestCase11) {
     std::ifstream input("tests/test_11.txt");
     std::ofstream output("got/ans_11.txt");
-    Application app(input, output);
+    ccms::Application app(input, output);
     app.run();
     
     std::string expected = readFile("answers/ans_11.txt");

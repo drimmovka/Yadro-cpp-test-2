@@ -1,13 +1,16 @@
 #pragma once
 
 #include <optional>
+#include <string>
 
 #include "time24.hpp"
 #include "exception.hpp"
 
+namespace ccms
+{
+
 using TableInfo = std::string;
-
-
+    
 class Table {
 // agreement: table doesnt know its id
 
@@ -42,3 +45,5 @@ private:
 
     void addOccupiedTime(const Time24& time);
 };
+
+} // namespace ccms

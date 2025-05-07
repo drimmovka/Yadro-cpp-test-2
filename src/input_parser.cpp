@@ -1,5 +1,9 @@
 #include "input_parser.hpp"
 
+namespace ccms
+{
+
+
 InputParser::InputParser(std::istream& is) 
     : _is(is)
     , _last_read_line_number(0)
@@ -78,3 +82,5 @@ void InputParser::readInBuf() {
     _buf.str(_last_read_line);
     ++_last_read_line_number;
 }
+
+} // namespace ccms

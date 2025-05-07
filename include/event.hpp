@@ -6,6 +6,9 @@
 #include "time24.hpp"
 #include "event_body.hpp"
 
+namespace ccms
+{
+
 using EventInfo = std::string;
 
 class iEvent {
@@ -129,3 +132,5 @@ public:
 private:
     const id_t _id = 0;
 };
+
+} // namespace ccms

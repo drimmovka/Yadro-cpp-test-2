@@ -10,6 +10,8 @@ cmake -B build && cmake --build build
 
 ## Тестирование
 ```bash
+git submodule init
+git submodule update
 cd test
 cmake -B build && cmake --build build
 ./build/test

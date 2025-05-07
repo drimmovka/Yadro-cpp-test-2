@@ -1,5 +1,8 @@
 #include "output_writer.hpp"
 
+namespace ccms
+{
+
 OutputWriter::OutputWriter(std::ostream& os) 
     : _os(os)
 {}
@@ -25,3 +28,5 @@ void OutputWriter::outputLog(const ComputerClub& computer_club, const ComputerCl
 void OutputWriter::outputMessage(const std::string& message) {
     _os << message << std::endl;
 }
+
+} // namespace ccms

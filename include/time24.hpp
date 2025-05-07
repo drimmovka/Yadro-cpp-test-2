@@ -7,6 +7,9 @@
 
 #include "exception.hpp"
 
+namespace ccms
+{
+
 class Time24 {
 public:
     explicit Time24(int hours=0, int minutes=0);
@@ -72,3 +75,5 @@ private:
     void parseFormattedTime(const std::string& formatted_time);
     
 };
+
+} // namespace ccms
