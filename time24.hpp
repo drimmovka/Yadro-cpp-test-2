@@ -8,16 +8,16 @@
 
 class Time24Exception : public std::exception {
 public:
-    explicit Time24Exception(const char *message)
+    explicit Time24Exception(const std::string& message)
         : _message(message)
     {}
 
     const char *what() const noexcept override {
-        return _message;
+        return _message.c_str();
     }
     
 private:
-    const char *_message;
+    const std::string _message;
 };
 
 

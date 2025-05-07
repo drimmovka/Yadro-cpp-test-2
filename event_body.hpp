@@ -12,7 +12,7 @@ public:
 
 class ClientArrivedEventBody : public iEventBody {
 public:
-    ClientArrivedEventBody(Client client)
+    ClientArrivedEventBody(const Client& client)
         : client(client)
     {}
 
@@ -22,7 +22,7 @@ public:
 
 class ClientTryToSitEventBody : public iEventBody {
 public:
-    ClientTryToSitEventBody(Client client, id_t table_id)
+    ClientTryToSitEventBody(const Client& client, id_t table_id)
         : client(client)
         , table_id(table_id)
     {}
@@ -34,7 +34,7 @@ public:
 
 class ClientWaitingEventBody : public iEventBody {
 public:
-    ClientWaitingEventBody(Client client)
+    ClientWaitingEventBody(const Client& client)
         : client(client)
     {}
 
@@ -42,9 +42,9 @@ public:
     Client client;
 };
 
-class ClientLeftEvent4Body : public iEventBody {
+class ClientDepartedBody : public iEventBody {
 public:
-    ClientLeftEvent4Body(Client client)
+    ClientDepartedBody(const Client& client)
         : client(client)
     {}
 
@@ -52,9 +52,9 @@ public:
     Client client;
 };
 
-class ClientLeftEvent11Body : public iEventBody {
+class ClientLeftEventBody : public iEventBody {
 public:
-    ClientLeftEvent11Body(Client client)
+    ClientLeftEventBody(const Client& client)
         : client(client)
     {}
 
@@ -66,7 +66,7 @@ public:
 
 class SeatClientEventBody : public iEventBody {
 public:
-SeatClientEventBody(Client client, id_t table_id)
+SeatClientEventBody(const Client& client, id_t table_id)
         : client(client)
         , table_id(table_id)
     {}
@@ -78,12 +78,12 @@ SeatClientEventBody(Client client, id_t table_id)
 
 class ErrorEventBody : public iEventBody {
 public:
-    ErrorEventBody(const char *message)
+    ErrorEventBody(const std::string& message)
         : message(message)
     {}
 
     // TODO: ideally, getters and setters are needed, but for now encapsulation is broken
-    const char *message;
+    const std::string message;
 };
 
 class WorkDayEndEventBody : public iEventBody {

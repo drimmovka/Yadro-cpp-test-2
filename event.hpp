@@ -1,5 +1,8 @@
 #pragma once
+
 #include <string>
+#include <memory>
+
 #include "time24.hpp"
 #include "event_body.hpp"
 
@@ -16,18 +19,19 @@ public:
 // INCOMING EVENTS
 class ClientArrivedEvent : public iEvent {
 public:
-    ClientArrivedEvent(Time24 time, ClientArrivedEventBody* body)
-        : iEvent(time), body(body) {}
-        
-    ~ClientArrivedEvent() = default;
-
+    ClientArrivedEvent(Time24 time, std::shared_ptr<ClientArrivedEventBody> body)
+        : iEvent(time)
+        , body(body)
+    {}
+    
     EventInfo info() const override {
         std::ostringstream oss;
         oss << time << " " << _id << " " << body->client;
         return oss.str();
     }
 
-    ClientArrivedEventBody* body;
+    // TODO: ideally, getters and setters are needed, but for now encapsulation is broken
+    std::shared_ptr<ClientArrivedEventBody> body;
 
 private:
     const id_t _id = 1; 
@@ -35,18 +39,19 @@ private:
 
 class ClientTryToSitEvent : public iEvent {
 public:
-    ClientTryToSitEvent(Time24 time, ClientTryToSitEventBody* body)
-        : iEvent(time), body(body) {}
-        
-    ~ClientTryToSitEvent() = default;
-
+    ClientTryToSitEvent(Time24 time, std::shared_ptr<ClientTryToSitEventBody> body)
+        : iEvent(time)
+        , body(body)
+    {}
+    
     EventInfo info() const override {
         std::ostringstream oss;
         oss << time << " " << _id << " " << body->client << " " << body->table_id;
         return oss.str();
     }
 
-    ClientTryToSitEventBody* body;
+    // TODO: ideally, getters and setters are needed, but for now encapsulation is broken
+    std::shared_ptr<ClientTryToSitEventBody> body;
 
 private:
     const id_t _id = 2; 
@@ -54,29 +59,30 @@ private:
 
 class ClientWaitingEvent : public iEvent {
 public:
-    ClientWaitingEvent(Time24 time, ClientWaitingEventBody* body)
-        : iEvent(time), body(body) {}
-        
-    ~ClientWaitingEvent() = default;
-
+    ClientWaitingEvent(Time24 time, std::shared_ptr<ClientWaitingEventBody> body)
+        : iEvent(time)
+        , body(body)
+    {}
+    
     EventInfo info() const override {
         std::ostringstream oss;
         oss << time << " " << _id << " " << body->client;
         return oss.str();
     }
     
-    ClientWaitingEventBody* body;
+    // TODO: ideally, getters and setters are needed, but for now encapsulation is broken
+    std::shared_ptr<ClientWaitingEventBody> body;
 
 private:
     const id_t _id = 3; 
 };
 
-class ClientLeftEvent4 : public iEvent {
+class ClientDeparted : public iEvent {
 public:
-    ClientLeftEvent4(Time24 time, ClientLeftEvent4Body* body)
-        : iEvent(time), body(body) {}
-        
-    ~ClientLeftEvent4() = default;
+    ClientDeparted(Time24 time, std::shared_ptr<ClientDepartedBody> body)
+        : iEvent(time)
+        , body(body)
+    {}
 
     EventInfo info() const override {
         std::ostringstream oss;
@@ -84,27 +90,29 @@ public:
         return oss.str();
     }
 
-    ClientLeftEvent4Body* body;
+    // TODO: ideally, getters and setters are needed, but for now encapsulation is broken
+    std::shared_ptr<ClientDepartedBody> body;
 
 private:
     const id_t _id = 4;
 };
 
 // OUTGOING EVENTS
-class ClientLeftEvent11 : public iEvent {
+class ClientLeftEvent : public iEvent {
 public:
-    ClientLeftEvent11(Time24 time, ClientLeftEvent11Body* body)
-        : iEvent(time), body(body) {}
+    ClientLeftEvent(Time24 time, std::shared_ptr<ClientLeftEventBody> body)
+        : iEvent(time)
+        , body(body)
+    {}
         
-    ~ClientLeftEvent11() = default;
-
     EventInfo info() const override {
         std::ostringstream oss;
         oss << time << " " << _id << " " << body->client;
         return oss.str();
     }
 
-    ClientLeftEvent11Body* body;
+    // TODO: ideally, getters and setters are needed, but for now encapsulation is broken
+    std::shared_ptr<ClientLeftEventBody> body;
 
 private:
     const id_t _id = 11;
@@ -112,18 +120,19 @@ private:
 
 class SeatClientEvent : public iEvent {
 public:
-    SeatClientEvent(Time24 time, SeatClientEventBody* body)
-        : iEvent(time), body(body) {}
+    SeatClientEvent(Time24 time, std::shared_ptr<SeatClientEventBody> body)
+        : iEvent(time)
+        , body(body)
+    {}
         
-    ~SeatClientEvent() = default;
-
     EventInfo info() const override {
         std::ostringstream oss;
         oss << time << " " << _id << " " << body->client << " " << body->table_id;
         return oss.str();
     }
     
-    SeatClientEventBody* body;
+    // TODO: ideally, getters and setters are needed, but for now encapsulation is broken
+    std::shared_ptr<SeatClientEventBody> body;
 
 private:
     const id_t _id = 12;
@@ -131,18 +140,19 @@ private:
 
 class ErrorEvent : public iEvent {
 public:
-    ErrorEvent(Time24 time, ErrorEventBody* body)
-        : iEvent(time), body(body) {}
+    ErrorEvent(Time24 time, std::shared_ptr<ErrorEventBody> body)
+        : iEvent(time)
+        , body(body)
+    {}
         
-    ~ErrorEvent() = default;
-
     EventInfo info() const override {
         std::ostringstream oss;
         oss << time << " " << _id << " " << body->message;
         return oss.str();
     }
 
-    ErrorEventBody* body;
+    // TODO: ideally, getters and setters are needed, but for now encapsulation is broken
+    std::shared_ptr<ErrorEventBody> body;
 
 private:
     const id_t _id = 13;
@@ -150,16 +160,17 @@ private:
 
 class WorkDayEndEvent : public iEvent {
 public:
-    WorkDayEndEvent(Time24 time, WorkDayEndEventBody* body)
-        : iEvent(time), body(body) {}
+    WorkDayEndEvent(Time24 time, std::shared_ptr<WorkDayEndEventBody> body)
+        : iEvent(time)
+        , body(body)
+    {}
         
-    ~WorkDayEndEvent() = default;
-
     EventInfo info() const override {
         return EventInfo();
     }
 
-    WorkDayEndEventBody* body;
+    // TODO: ideally, getters and setters are needed, but for now encapsulation is broken
+    std::shared_ptr<WorkDayEndEventBody> body;
 
 private:
     const id_t _id = 0;
