@@ -1,0 +1,124 @@
+digraph UML {
+    rankdir=BT;
+    node [shape=record, fontname=Arial];
+    
+    subgraph cluster_ccms {
+        label="namespace ccms";
+        style=filled;
+        color=lightgrey;
+        
+        /* main classes */
+        "ComputerClub" [label="{ComputerClub|- _start_time : Time24\l- _end_time : Time24\l- _tables : Table*\l- _clients : Client*\l}"];
+        "ComputerClubManager" [label="{ComputerClubManager|- _computer_club : ComputerClub&\l- _handled_events_info : EventInfo*\l}"];
+        "Application" [label="{Application|- _input_parser : InputParser\l- _output_writer : OutputWriter\l}"];
+        
+
+        /* io classes */
+        "EventParser" [label="{EventParser|- _event_parser : EventParser\l}"];
+        "InputParser" [label="{InputParser|- _is : istream&\l- _event_parser : EventParser\l}"];
+        "OutputWriter" [label="{OutputWriter|- _os : ostream&\l}"];
+
+        /* util classes  */
+        "Time24" [label="{Time24|- _hours : int\l- _minutes : int\l}"];
+        "Client" [label="{Client|- _name : std::string\l}"];
+        "Table" [label="{Table|- _hourly_rate : int\l- _total_occupied_time : Time24\l}"];
+        "Client::ClientHash" [label="{Client::ClientHash|}"];
+        
+        /* event classes */
+        "iEvent" [label="{iEvent|- time : Time24\l}"];
+        /*
+        "ClientArrivedEvent" [label="{ClientArrivedEvent|- body : ClientArrivedEventBody*\l}"];
+        "ClientTryToSitEvent" [label="{ClientTryToSitEvent|- body : ClientTryToSitEventBody*\l}"];
+        "ClientWaitingEvent" [label="{ClientWaitingEvent|- body : ClientWaitingEventBody*\l}"];
+        "ClientDepartedEvent" [label="{ClientDepartedEvent|- body : ClientDepartedEventBody*\l}"];
+        "ClientLeftEvent" [label="{ClientLeftEvent|- body : ClientLeftEventBody*\l}"];
+        "SeatClientEvent" [label="{SeatClientEvent|- body : SeatClientEventBody*\l}"];
+        "ErrorEvent" [label="{ErrorEvent|- body : ErrorEventBody*\l}"];
+        "WorkDayEndEvent" [label="{WorkDayEndEvent|- body : WorkDayEndEventBody*\l}"];
+        */
+
+        /* event body classes */
+        /*
+        "iEventBody" [label="{iEventBody|}"];
+        "ClientArrivedEventBody" [label="{ClientArrivedEventBody|- client : Client\l}"];
+        "ClientTryToSitEventBody" [label="{ClientTryToSitEventBody|- client : Client\l- table_id : id_t\l}"];
+        "ClientWaitingEventBody" [label="{ClientWaitingEventBody|- client : Client\l}"];
+        "ClientDepartedEventBody" [label="{ClientDepartedEventBody|- client : Client\l}"];
+        "ClientLeftEventBody" [label="{ClientLeftEventBody|- client : Client\l}"];
+        "SeatClientEventBody" [label="{SeatClientEventBody|- client : Client\l- table_id : id_t\l}"];
+        "ErrorEventBody" [label="{ErrorEventBody|- message : string\l}"];
+        "WorkDayEndEventBody" [label="{WorkDayEndEventBody|}"];
+        */
+
+        /* exception classes */
+        /*
+        "ClientException" [label="{ClientException|}"];
+        "ComputerClubManagerException" [label="{ComputerClubManagerException|}"];
+        "ComputerClubException" [label="{ComputerClubException|}"];
+        "EventParserException" [label="{EventParserException|}"];
+        "InputParserException" [label="{InputParserException|}"];
+        "TableException" [label="{TableException|}"];
+        "Time24Exception" [label="{Time24Exception|}"];
+        */
+    }
+    
+    /* Inheritance */
+    /*
+    "ClientArrivedEvent" -> "iEvent" [arrowhead=empty];
+    "ClientTryToSitEvent" -> "iEvent" [arrowhead=empty];
+    "ClientWaitingEvent" -> "iEvent" [arrowhead=empty];
+    "ClientDepartedEvent" -> "iEvent" [arrowhead=empty];
+    "ClientLeftEvent" -> "iEvent" [arrowhead=empty];
+    "SeatClientEvent" -> "iEvent" [arrowhead=empty];
+    "ErrorEvent" -> "iEvent" [arrowhead=empty];
+    "WorkDayEndEvent" -> "iEvent" [arrowhead=empty];
+    
+    "ClientArrivedEventBody" -> "iEventBody" [arrowhead=empty];
+    "ClientTryToSitEventBody" -> "iEventBody" [arrowhead=empty];
+    "ClientWaitingEventBody" -> "iEventBody" [arrowhead=empty];
+    "ClientDepartedEventBody" -> "iEventBody" [arrowhead=empty];
+    "ClientLeftEventBody" -> "iEventBody" [arrowhead=empty];
+    "SeatClientEventBody" -> "iEventBody" [arrowhead=empty];
+    "ErrorEventBody" -> "iEventBody" [arrowhead=empty];
+    "WorkDayEndEventBody" -> "iEventBody" [arrowhead=empty];
+    
+    "ClientException" -> "std::exception" [arrowhead=empty];
+    "ComputerClubManagerException" -> "std::exception" [arrowhead=empty];
+    "ComputerClubException" -> "std::exception" [arrowhead=empty];
+    "EventParserException" -> "std::exception" [arrowhead=empty];
+    "InputParserException" -> "std::exception" [arrowhead=empty];
+    "TableException" -> "std::exception" [arrowhead=empty];
+    "Time24Exception" -> "std::exception" [arrowhead=empty];
+    */
+    
+    /* Associations */
+    "Application" -> "InputParser" [arrowhead=vee];
+    "Application" -> "OutputWriter" [arrowhead=vee];
+    
+    "InputParser" -> "EventParser" [arrowhead=vee];
+    "InputParser" -> "iEvent" [arrowhead=vee];
+    
+    "EventParser" -> "iEvent" [arrowhead=vee];
+    
+    "OutputWriter" -> "ComputerClub" [arrowhead=vee];
+    "OutputWriter" -> "ComputerClubManager" [arrowhead=vee];
+    
+    "ComputerClubManager" -> "ComputerClub" [arrowhead=vee];
+    "ComputerClubManager" -> "iEvent" [arrowhead=vee];
+
+    "ComputerClub" -> "Client::ClientHash" [arrowhead=vee];
+    "ComputerClub" -> "Table" [arrowhead=vee];
+    "ComputerClub" -> "Client" [arrowhead=vee];
+    
+    /* Compositions */
+    "Client::ClientHash" -> "Client" [arrowhead=diamond];
+    
+    /* Exception Dependencies */
+    // "ClientException" -> "Client" [arrowhead=vee, style=dotted];
+    // "ComputerClubManagerException" -> "ComputerClubManager" [arrowhead=vee, style=dotted];
+    // "ComputerClubException" -> "ComputerClub" [arrowhead=vee, style=dotted];
+    // "EventParserException" -> "EventParser" [arrowhead=vee, style=dotted];
+    // "InputParserException" -> "InputParser" [arrowhead=vee, style=dotted];
+    // "TableException" -> "Table" [arrowhead=vee, style=dotted];
+    // "Time24Exception" -> "Time24" [arrowhead=vee, style=dotted];
+}

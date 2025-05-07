@@ -57,3 +57,6 @@ CMake-файлы:
 - test/CMakeLists.txt 
 
 ```
+
+## Упрощенная UML диаграмма
+![Image alt](uml.png)
