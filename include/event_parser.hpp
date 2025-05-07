@@ -28,7 +28,7 @@ private:
 
     std::shared_ptr<iEvent> parseClientWaitingEvent(std::istream& iss, const Time24& event_time);
 
-    std::shared_ptr<iEvent> parseClientDeparted(std::istream& iss, const Time24& event_time);
+    std::shared_ptr<iEvent> parseClientDepartedEvent(std::istream& iss, const Time24& event_time);
 };
 
 } // namespace ccms

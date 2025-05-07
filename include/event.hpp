@@ -63,14 +63,14 @@ private:
 };
 
 
-class ClientDeparted : public iEvent {
+class ClientDepartedEvent : public iEvent {
 public:
-    ClientDeparted(Time24 time, std::shared_ptr<ClientDepartedBody> body);
+    ClientDepartedEvent(Time24 time, std::shared_ptr<ClientDepartedEventBody> body);
 
     EventInfo info() const override;
 
     // TODO: ideally, getters and setters are needed, but for now encapsulation is broken
-    std::shared_ptr<ClientDepartedBody> body;
+    std::shared_ptr<ClientDepartedEventBody> body;
 
 private:
     const id_t _id = 4;

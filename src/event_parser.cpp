@@ -18,7 +18,7 @@ std::shared_ptr<iEvent> EventParser::parse(const std::string& line) {
         case 1: return parseClientArrivedEvent(iss, event_time);
         case 2: return parseClientTryToSitEvent(iss, event_time);
         case 3: return parseClientWaitingEvent(iss, event_time);
-        case 4: return parseClientDeparted(iss, event_time);
+        case 4: return parseClientDepartedEvent(iss, event_time);
         default: throw EventParserException("Unknown event id");
     }
 }
@@ -59,12 +59,12 @@ std::shared_ptr<iEvent> EventParser::parseClientWaitingEvent(std::istream& iss, 
     );
 }
 
-std::shared_ptr<iEvent> EventParser::parseClientDeparted(std::istream& iss, const Time24& event_time) {
+std::shared_ptr<iEvent> EventParser::parseClientDepartedEvent(std::istream& iss, const Time24& event_time) {
     std::string client_name;
     iss >> client_name; checkForFail(iss);
-    return std::make_shared<ClientDeparted>(
+    return std::make_shared<ClientDepartedEvent>(
         event_time,
-        std::make_shared<ClientDepartedBody>(Client(client_name))
+        std::make_shared<ClientDepartedEventBody>(Client(client_name))
     );
 }
 

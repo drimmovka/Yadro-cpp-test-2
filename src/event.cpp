@@ -43,12 +43,12 @@ EventInfo ClientWaitingEvent::info() const {
 }
 
 
-ClientDeparted::ClientDeparted(Time24 time, std::shared_ptr<ClientDepartedBody> body)
+ClientDepartedEvent::ClientDepartedEvent(Time24 time, std::shared_ptr<ClientDepartedEventBody> body)
     : iEvent(time)
     , body(body)
 {}
 
-EventInfo ClientDeparted::info() const {
+EventInfo ClientDepartedEvent::info() const {
     std::ostringstream oss;
     oss << time << " " << _id << " " << body->client;
     return oss.str();

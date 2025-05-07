@@ -19,7 +19,7 @@ ClientWaitingEventBody::ClientWaitingEventBody(const Client& client)
     : client(client)
 {}
 
-ClientDepartedBody::ClientDepartedBody(const Client& client)
+ClientDepartedEventBody::ClientDepartedEventBody(const Client& client)
     : client(client)
 {}
 

@@ -51,7 +51,7 @@ private:
 
     void handleClientWaitingEvent(const std::shared_ptr<ClientWaitingEvent>& ev);
 
-    void handleClientDeparted(const std::shared_ptr<ClientDeparted>& ev);
+    void handleClientDepartedEvent(const std::shared_ptr<ClientDepartedEvent>& ev);
 
     void handleClientLeftEvent(const std::shared_ptr<ClientLeftEvent>& ev);
 

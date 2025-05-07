@@ -9,7 +9,7 @@ ComputerClubManager::ComputerClubManager(ComputerClub& computer_club)
     registerHandler<ClientArrivedEvent>(&ComputerClubManager::handleClientArrivedEvent);
     registerHandler<ClientTryToSitEvent>(&ComputerClubManager::handleClientTryToSitEvent);
     registerHandler<ClientWaitingEvent>(&ComputerClubManager::handleClientWaitingEvent);
-    registerHandler<ClientDeparted>(&ComputerClubManager::handleClientDeparted);
+    registerHandler<ClientDepartedEvent>(&ComputerClubManager::handleClientDepartedEvent);
     registerHandler<ClientLeftEvent>(&ComputerClubManager::handleClientLeftEvent);
     registerHandler<SeatClientEvent>(&ComputerClubManager::handleSeatClientEvent);
     registerHandler<ErrorEvent>(&ComputerClubManager::handleErrorEvent);
@@ -94,7 +94,7 @@ void ComputerClubManager::handleClientWaitingEvent(const std::shared_ptr<ClientW
     }
 }
 
-void ComputerClubManager::handleClientDeparted(const std::shared_ptr<ClientDeparted>& ev) {
+void ComputerClubManager::handleClientDepartedEvent(const std::shared_ptr<ClientDepartedEvent>& ev) {
     _handled_events_info.emplace_back(ev->info());
     try {
         std::optional<id_t> left_table_id;

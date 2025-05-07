@@ -38,9 +38,9 @@ public:
     Client client;
 };
 
-class ClientDepartedBody : public iEventBody {
+class ClientDepartedEventBody : public iEventBody {
 public:
-    explicit ClientDepartedBody(const Client& client);
+    explicit ClientDepartedEventBody(const Client& client);
 
     // TODO: ideally, getters and setters are needed, but for now encapsulation is broken
     Client client;
